@@ -1,24 +1,23 @@
 #!/bin/bash
-# FILE_1: Disk and Permission Auditor
+# FILE_1: System Identity Report
+# Author: Raj Aryan Gupta
 
-DIRS=("/etc" "/var/log" "/home" "/usr/bin" "/tmp")
+STUDENT_NAME="Raj Aryan Gupta"
+SOFTWARE_CHOICE="Git"
 
-echo "Directory Audit Report"
-echo "----------------------"
+KERNEL=$(uname -r)
+USER_NAME=$(whoami)
+UPTIME=$(uptime -p)
+DATE=$(date)
+DISTRO=$(cat /etc/os-release | grep PRETTY_NAME | cut -d= -f2)
 
-for DIR in "${DIRS[@]}"; do
-    if [ -d "$DIR" ]; then
-        PERMS=$(ls -ld $DIR | awk '{print $1, $3, $4}')
-        SIZE=$(du -sh $DIR 2>/dev/null | cut -f1)
-        echo "$DIR => Permissions: $PERMS | Size: $SIZE"
-    else
-        echo "$DIR does not exist"
-    fi
-done
-
-# Git config check
-if [ -d "/etc/git" ]; then
-    ls -ld /etc/git
-else
-    echo "Git config directory not found"
-fi
+echo "================================"
+echo " Open Source Audit — $STUDENT_NAME"
+echo "================================"
+echo "Software : $SOFTWARE_CHOICE"
+echo "Kernel   : $KERNEL"
+echo "User     : $USER_NAME"
+echo "Uptime   : $UPTIME"
+echo "Date     : $DATE"
+echo "Distro   : $DISTRO"
+echo "License  : Linux is mostly under GPL (Freedom to use, modify, distribute)"
