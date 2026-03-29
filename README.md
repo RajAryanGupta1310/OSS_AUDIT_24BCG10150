@@ -25,8 +25,8 @@ How to Run
   Bash
   chmod +x *.sh
 
-./Script1_System_Identity_Report.sh  
-./FOSS_Package_Inspector.sh  
-./Disk_Permission_Auditor.sh  
-./Script4_Log_File_Analyzer.sh  
-./Script5_Open_Source_Manifesto_Generator.sh
+./FILE_1_System_Identity_Report.sh  
+./FILE_2FOSS_Package_Inspector.sh  
+./FILE_3Disk_Permission_Auditor.sh  
+./FILE_4_Log_File_Analyzer.sh  
+./FILE_5_Open_Source_Manifesto_Generator.sh
