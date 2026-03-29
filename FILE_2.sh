@@ -1,6 +1,6 @@
 #!/bin/bash
 # FILE_2: FOSS Package Inspector
-
+ 
 PACKAGE="git"
 
 if dpkg -l | grep -q $PACKAGE; then
